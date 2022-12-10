@@ -1,10 +1,32 @@
+@media screen and (min-width: 768px) {
+    body {
+        width: 768px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: "nav" "body" "footer";
+    }
+    nav {
+        display: grid;
+        grid-template-areas: "logo search sign" "sections";
+        width:100%;
+        height: auto;
+    }
+}
+
+
 html {
     background-color: rgba(122, 191, 191, .5);
+    display: grid;
 }
 body {
     width: 1280px;
     margin: 0 auto;
     background-color: #F2F2F2;
+    display: grid;
+    grid-template-areas: "nav" "search" "body" "footer";
+}
+main {
+    grid-area: body;
 }
 h1 {
     font-family:'Bebas Neue', cursive;
@@ -28,6 +50,26 @@ nav a {
 nav ul {
     list-style: none;
     display: flex;
+    align-self: center;
+    width: 540px;
+    margin-right: 250px;
+    margin-left: 100px;
+}
+nav li {
+    color:#EB5428;
+    text-align: center;
+    margin-right: 10px;
+}
+nav li:last-child {
+    margin-right:0;
+}
+.avatar {
+    fill:#EB5428;
+    transform: scale(120%);
+    width: 100px;
+    text-align: center;
+    font-family:'Bebas Neue', cursive;
+    font-size: 20px;
 }
 nav img {
     width: 50px;
@@ -39,19 +81,36 @@ nav span {
     background-color: white;
 }
 nav ul, nav img, nav li, nav figure, nav figcaption {
-    background-color: white;
     padding: 10px;
-}
-nav svg {
-    background-color: #EB5428;
 }
 #hamburger {
     visibility: hidden;
-    width: 0px;
-    margin: 0px;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
 }
-#search {
-    clear:both;
+#logo {
+    margin:0;
+    align-self: center;
+    background-color:#EB5428;
+    padding: 40px;
+    margin-right: 50px;
+}
+.search {
+    grid-area: search;
+    margin: 70px auto;
+    margin-bottom: 0;
+}
+.search svg {
+    margin:0;
+    position:absolute;
+}
+.search input{
+    padding: 10px 0;
+    width: 200px;
+    border-color: #EB5428;
+    border-style: solid;
 }
 #hamburger svg, #search svg{
     background-color: white;
@@ -60,8 +119,9 @@ nav {
     font-family: 'Montserrat', sans-serif;
     background-color: white;
     display: flex;
-    top: 0;
     width: 1280px;
+    height:150px;
+    grid-area: nav;
 }
 #description {
     padding: 0 30px;
@@ -156,4 +216,61 @@ input {
 dt {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+}
+aside {
+    background-color: #7ABFBF;
+    padding: 10px;
+}
+aside h3 {
+    text-align: center;
+}
+dl {
+    display: flex;
+}
+dt {
+    margin-right: 20px;
+}
+dt:last-child {
+    margin: 0;
+}
+.bolded {
+    font-family:'Bebas Neue', cursive;
+    font-size: 20px;
+}
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-areas: "a b";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    height: 300px;
+}
+footer menu{
+    grid-area: b;
+    display: flex;
+}
+footer menu li{
+    width: 50px;
+    margin-right: 110px;
+    text-align: center;
+    color:#EB5428;
+}
+footer menu li:last-child{
+    margin-right: 0;
+}
+footer figure {
+    grid-area: a;
+    width: 500px;
+    height: 400px;
+}
+footer figure img {
+    width:180px;
+}
+footer figcaption {
+    font-family:'Bebas Neue', cursive;
+    text-align: center;
+    position: relative;
+    right: 0;
+    top: 50px;
 }
