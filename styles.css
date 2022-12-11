@@ -1,6 +1,5 @@
 html {
     background-color: rgba(122, 191, 191, .5);
-    display: grid;
 }
 body {
     width: 1280px;
@@ -49,7 +48,6 @@ nav li:last-child {
 }
 .avatar {
     fill:#EB5428;
-    transform: scale(120%);
     width: 100px;
     text-align: center;
     font-family:'Bebas Neue', cursive;
@@ -262,7 +260,7 @@ footer figcaption {
     font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     body {
         width: 768px;
         margin: 0 auto;
@@ -414,3 +412,163 @@ footer figcaption {
     }
 }
 
+@media screen and (max-width: 500px) {
+    body {
+        width: 414px;
+        padding: 0;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: "nav" "body" "footer";
+    }
+    nav {
+        display: grid;
+        width:414px;
+        height: 110px;
+        grid-template-areas: "burger logo sign";
+        grid-template-columns: 1fr 1fr 1fr;
+        background-color: #EB5428;
+    }
+    nav ul {
+        visibility: hidden;
+    }
+    #hamburger {
+        visibility: visible;
+        grid-area: burger;
+        align-self: center;
+        width: 85px;
+        height: auto;
+        text-align: center;
+        background-color: white;
+        padding: 30px 10px;
+        height: 50px;
+    }
+    #hamburger figcaption {
+        font-family:'Bebas Neue', cursive;
+        font-size: 20px;
+        position: relative;
+        bottom: 12px;
+    }
+    .avatar {
+        margin:0px auto;
+        grid-area: sign;
+        padding: 0 5px;
+        height: 85px;
+        padding-bottom: 0;
+        padding-top: 30px;
+        position: relative;
+        bottom: 5px;
+        right: 31px;
+        background-color: white;
+    }
+    .avatar figcaption {
+        position:relative;
+        bottom: 15px;
+    }
+    #logo {
+        margin:0;
+        grid-area: logo;
+        width: 140px;
+        margin: 0 70px;
+        margin-right:10px;
+        padding: 10px;
+        margin-left: 60px;
+    }
+    .search {
+        grid-area: body;
+        margin: 0;
+        margin-top: 15px;
+    }
+    h1 {
+        text-align: left;
+        width: 414px;
+        margin: 30px 0;
+        margin-top: 50px;
+        padding-left: 80px;
+    }
+    #menu menu{
+        display: flex;
+        border: none;
+        position: relative;
+        padding:0;
+        width: 414px;
+        background-color: white;
+    }
+    #menu {
+        display:block;
+    }
+    #menu img {
+        width: 414px;
+        height: auto;
+    }
+    #menu li {
+        margin-top: 20px;
+        margin-right: 50px;
+        margin-bottom: 0px;
+    }
+    #menu li:first-child {
+        margin-left: 50px;
+    }
+    #description {
+        width: 370px;
+    }
+    #details {
+        width: 414px;
+        background-color: #F2F2F2;
+        color:#0D0D0D;
+    }
+    #details ul {
+        display: block;
+        margin: 0 auto;
+    }
+    #details li {
+        display: flex;
+        margin: 0;
+    }
+    #details li p:last-child {
+        margin-left: 5px;
+    }
+    #recipe {
+        width: 414px;
+        display:block;
+    }
+    #directions ol{
+        margin: 0;
+        margin-right: 10px;
+    }
+    aside {
+        width: 414px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    aside dl {
+        width: 414px;
+        display: block;
+    }
+    footer {
+        width: 414px;
+        height: 400px;
+        display: block;
+    }
+    footer figure {
+        display: grid;
+        grid-template-areas: "a" "b";
+        grid-template-rows: 1fr 200px;
+        margin: 0 110px;
+    }
+    footer figure img {
+        grid-area: a;
+        margin-bottom: 0;
+    }
+     footer figcaption {
+        grid-area: b;
+        right: 155px;
+        top: 0;
+    }
+    footer menu {
+        position: relative;
+        left: 0;
+    }
+    footer menu li{
+        margin-right: 45px;
+    }
+}
