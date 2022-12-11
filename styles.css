@@ -1,19 +1,3 @@
-@media screen and (min-width: 768px) {
-    body {
-        width: 768px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-areas: "nav" "body" "footer";
-    }
-    nav {
-        display: grid;
-        grid-template-areas: "logo search sign" "sections";
-        width:100%;
-        height: auto;
-    }
-}
-
-
 html {
     background-color: rgba(122, 191, 191, .5);
     display: grid;
@@ -274,3 +258,159 @@ footer figcaption {
     right: 0;
     top: 50px;
 }
+.rate {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 768px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-areas: "nav" "body" "footer";
+    }
+    nav {
+        display: grid;
+        width:768px;
+        height: 230px;
+        grid-template-areas: "logo search sign" "sections sections sections";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    nav ul {
+        width: 768px;
+        grid-area: sections;
+        height: 300px;
+        padding:0;
+        margin: 0;
+    }
+    nav li {
+        margin-right: 5px;
+    }
+    nav li:last-child{
+        margin-right: 0;
+    }
+    .avatar {
+        margin:0 auto;
+        grid-area: sign;
+        padding: 0;
+        position: relative;
+        margin-left: 120px;
+        margin-top: 20px;
+    }
+    #logo {
+        margin:0;
+        grid-area: logo;
+        padding: 20px;
+        width: 65px;
+        position: relative;
+        background-color: #EB5428;
+    }
+    .search {
+        grid-area: nav;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        right: -70px;
+        margin-top: 20px;
+    }
+    h1 {
+        text-align: left;
+        position: relative;
+        left: 40px;
+        margin-top: 10px;
+    }
+    #menu menu{
+        display: flex;
+        border: none;
+        position: absolute;
+        padding:0;
+        width: 768px;
+        background-color: rgba(255, 255, 255, 0.758);
+    }
+    #menu {
+        display:block;
+    }
+    #menu img {
+        width: 768px;
+        height: auto;
+    }
+    #menu li {
+        margin-top: 20px;
+        margin-right: 150px;
+        margin-bottom: 0px;
+    }
+    #menu li:first-child {
+        margin-left: 50px;
+    }
+    #description {
+        width: 700px;
+    }
+    #details {
+        width: 768px;
+        background-color: #F2F2F2;
+        color:#0D0D0D;
+    }
+    #details ul {
+        display: inline-block;
+        margin: 0 auto;
+    }
+    #details li {
+        display: flex;
+        margin: 0;
+    }
+    #details li p:last-child {
+        margin-left: 5px;
+    }
+    #recipe {
+        width: 768px;
+    }
+    aside {
+        width: 768px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    aside dl {
+        width: 768px;
+        display: grid;
+        grid-template-areas: "a b" "c d";
+    }
+    #a {
+        grid-area: a;
+    }
+    #b {
+        grid-area: b;
+    }
+    #c {
+        grid-area: c;
+    }
+    #d {
+        grid-area: d;
+    }
+    footer {
+        width: 768px;
+        height: 300px;
+    }
+    footer menu {
+        position:relative;
+        right: 250px;
+    }
+    footer figure {
+        display: grid;
+        grid-template-areas: "a" "b";
+        grid-template-rows: 1fr 200px;
+    }
+    footer figure img {
+        grid-area: a;
+        margin-bottom: 0;
+    }
+     footer figcaption {
+        grid-area: b;
+        right: 155px;
+        top: 0;
+    }
+    footer menu li{
+        margin-right: 50px;
+    }
+}
+
